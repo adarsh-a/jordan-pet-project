@@ -446,8 +446,7 @@ namespace EmployeeManagement.Controllers
             else
             {
                 return View(model);
-            }
-            
+            }   
         }
 
         //Function to delete employee
@@ -580,13 +579,13 @@ namespace EmployeeManagement.Controllers
                 var empID = data["emp_ID"];
                 var managerID = data["manager_ID"];
 
-                //splitting employee ID bt ',' to get all the selected employees 
+                //splitting employee ID by ',' to get all the selected employees 
                 string[] employees = empID.Split(',');
 
                 //Check all team names in database
                 var CheckTeamName = from e in db.TEAMs
-                                where e.team_name == teamname
-                                select e.team_name;
+                                    where e.team_name == teamname
+                                    select e.team_name;
 
                 //If team name does not exist proceed with insert operation else show error
                 if(CheckTeamName.FirstOrDefault() == null)
