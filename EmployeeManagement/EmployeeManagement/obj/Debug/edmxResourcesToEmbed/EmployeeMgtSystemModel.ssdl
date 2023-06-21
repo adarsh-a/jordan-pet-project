@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeMgtSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="emp_ID" />
+    </Key>
+    <Property Name="emp_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="50" />
+    <Property Name="last_name" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="100" />
+    <Property Name="phone_number" Type="varchar" MaxLength="8" />
+    <Property Name="email" Type="varchar" MaxLength="75" />
+    <Property Name="status" Type="varchar" MaxLength="20" />
+    <Property Name="password" Type="varchar" MaxLength="12" />
+    <Property Name="role_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ROLE">
+    <Key>
+      <PropertyRef Name="role_ID" />
+    </Key>
+    <Property Name="role_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="role_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TEAM">
+    <Key>
+      <PropertyRef Name="team_ID" />
+    </Key>
+    <Property Name="team_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="team_name" Type="varchar" MaxLength="50" />
+    <Property Name="emp_ID" Type="int" Nullable="false" />
+    <Property Name="manager_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Employee__role_I__3B75D760">
+    <End Role="ROLE" Type="Self.ROLE" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLE">
+        <PropertyRef Name="role_ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="role_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TEAM__emp_ID__3E52440B">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="TEAM" Type="Self.TEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="emp_ID" />
+      </Principal>
+      <Dependent Role="TEAM">
+        <PropertyRef Name="emp_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TEAM__manager_ID__3F466844">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="TEAM" Type="Self.TEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="emp_ID" />
+      </Principal>
+      <Dependent Role="TEAM">
+        <PropertyRef Name="manager_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmployeeMgtSystemModelStoreContainer">
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLE" EntityType="Self.ROLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEAM" EntityType="Self.TEAM" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Employee__role_I__3B75D760" Association="Self.FK__Employee__role_I__3B75D760">
+      <End Role="ROLE" EntitySet="ROLE" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TEAM__emp_ID__3E52440B" Association="Self.FK__TEAM__emp_ID__3E52440B">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="TEAM" EntitySet="TEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TEAM__manager_ID__3F466844" Association="Self.FK__TEAM__manager_ID__3F466844">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="TEAM" EntitySet="TEAM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

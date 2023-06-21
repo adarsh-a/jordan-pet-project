@@ -21,11 +21,45 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (Session["role"] == null)
+                    {
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    }
+                    @if (Session["role"] != null && Session["role"].ToString() == "Admin")
+                    {
+                        @* Admin nav *@
+                        <li>@Html.ActionLink("Home", "AdminDashboard", "Home")</li>
+                        <li>@Html.ActionLink("Role", "Role", "Home")</li>
+                        <li>@Html.ActionLink("Employee", "ViewEmployees", "Home")</li>
+                    }
+                    @if (Session["role"] != null && Session["role"].ToString() == "Manager")
+                    {
+                        @* Manager nav *@
+                        <li>@Html.ActionLink("Home", "ManagerDashboard", "Home")</li>
+                        <li>@Html.ActionLink("My Team", "Home")</li>
+                        <li>@Html.ActionLink("My Profile", "EditProfile", "Home")</li>
+                    }
+                    @if (Session["role"] != null && Session["role"].ToString() != "Manager" && Session["role"].ToString() != "Admin")
+                    {
+                        @* Employee nav *@
+                        <li>@Html.ActionLink("Home", "EmployeeDashboard", "Home")</li>
+                        <li>@Html.ActionLink("My Team", "Home")</li>
+                        <li>@Html.ActionLink("My Profile", "EditProfile", "Home")</li>
+                    }
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Session["email"] == null && Session["eid"] == null && Session["role"] == null)
+                    {
+                        <li>@Html.ActionLink("Sign In", "Login", "Home")</li>
+                    }
+                    @if (Session["email"] != null && Session["eid"] != null && Session["role"] != null)
+                    {
+                        <li>@Html.ActionLink("Sign Out", "Signout", "Home")</li>
+                    }
+                </ul>
+                @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
