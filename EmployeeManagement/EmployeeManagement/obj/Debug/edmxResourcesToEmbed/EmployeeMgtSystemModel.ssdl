@@ -27,8 +27,24 @@
     </Key>
     <Property Name="team_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="team_name" Type="varchar" MaxLength="50" />
-    <Property Name="emp_ID" Type="int" Nullable="false" />
+    <Property Name="emp_ID" Type="int" />
     <Property Name="manager_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TEAMS">
+    <Key>
+      <PropertyRef Name="teams_ID" />
+    </Key>
+    <Property Name="teams_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teams_name" Type="varchar" MaxLength="50" />
+    <Property Name="manager_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="TMEMBERS">
+    <Key>
+      <PropertyRef Name="tmembers_ID" />
+    </Key>
+    <Property Name="tmembers_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teams_ID" Type="int" />
+    <Property Name="emp_ID" Type="int" />
   </EntityType>
   <Association Name="FK__Employee__role_I__3B75D760">
     <End Role="ROLE" Type="Self.ROLE" Multiplicity="1" />
@@ -43,7 +59,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__TEAM__emp_ID__3E52440B">
-    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
     <End Role="TEAM" Type="Self.TEAM" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Employee">
@@ -66,10 +82,48 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__TEAMS__manager_I__4222D4EF">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="TEAMS" Type="Self.TEAMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="emp_ID" />
+      </Principal>
+      <Dependent Role="TEAMS">
+        <PropertyRef Name="manager_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMEMBERS__emp_ID__45F365D3">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="TMEMBERS" Type="Self.TMEMBERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="emp_ID" />
+      </Principal>
+      <Dependent Role="TMEMBERS">
+        <PropertyRef Name="emp_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMEMBERS__teams___44FF419A">
+    <End Role="TEAMS" Type="Self.TEAMS" Multiplicity="0..1" />
+    <End Role="TMEMBERS" Type="Self.TMEMBERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEAMS">
+        <PropertyRef Name="teams_ID" />
+      </Principal>
+      <Dependent Role="TMEMBERS">
+        <PropertyRef Name="teams_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="EmployeeMgtSystemModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ROLE" EntityType="Self.ROLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TEAM" EntityType="Self.TEAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEAMS" EntityType="Self.TEAMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TMEMBERS" EntityType="Self.TMEMBERS" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Employee__role_I__3B75D760" Association="Self.FK__Employee__role_I__3B75D760">
       <End Role="ROLE" EntitySet="ROLE" />
       <End Role="Employee" EntitySet="Employee" />
@@ -81,6 +135,18 @@
     <AssociationSet Name="FK__TEAM__manager_ID__3F466844" Association="Self.FK__TEAM__manager_ID__3F466844">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="TEAM" EntitySet="TEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TEAMS__manager_I__4222D4EF" Association="Self.FK__TEAMS__manager_I__4222D4EF">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="TEAMS" EntitySet="TEAMS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMEMBERS__emp_ID__45F365D3" Association="Self.FK__TMEMBERS__emp_ID__45F365D3">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="TMEMBERS" EntitySet="TMEMBERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMEMBERS__teams___44FF419A" Association="Self.FK__TMEMBERS__teams___44FF419A">
+      <End Role="TEAMS" EntitySet="TEAMS" />
+      <End Role="TMEMBERS" EntitySet="TMEMBERS" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

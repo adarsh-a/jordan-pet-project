@@ -11,23 +11,21 @@ namespace EmployeeManagement
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-    public partial class ROLE
+    
+    public partial class TEAM1
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ROLE()
+        public TEAM1()
         {
-            this.Employees = new HashSet<Employee>();
+            this.TMEMBERS = new HashSet<TMEMBER>();
         }
     
-        [Required]
-        public int role_ID { get; set; }
-
-        [Required]
-        public string role_name { get; set; }
+        public int teams_ID { get; set; }
+        public string teams_name { get; set; }
+        public Nullable<int> manager_ID { get; set; }
     
+        public virtual Employee Employee { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<TMEMBER> TMEMBERS { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace EmployeeManagement
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<ROLE> ROLEs { get; set; }
         public virtual DbSet<TEAM> TEAMs { get; set; }
-
-        public System.Data.Entity.DbSet<EmployeeManagement.Models.RoleModels> RoleModels { get; set; }
+        public virtual DbSet<TEAM1> TEAMS1 { get; set; }
+        public virtual DbSet<TMEMBER> TMEMBERS { get; set; }
     }
 }

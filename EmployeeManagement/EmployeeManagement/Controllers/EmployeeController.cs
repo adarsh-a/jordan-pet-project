@@ -6,15 +6,15 @@ using System.Web.Mvc;
 
 namespace EmployeeManagement.Controllers
 {
-    public class testController : Controller
+    public class EmployeeController : Controller
     {
         EmployeeMgtSystemEntities db = new EmployeeMgtSystemEntities();
 
-        public ActionResult Index()
+        //Function for employee dashboard
+        [HttpGet]
+        public ActionResult EmployeeDashboard()
         {
-            return View(db.Employees.ToList());
-        
-    
-}
-}
+            return View();
+        }
+    }
 }

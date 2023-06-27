@@ -19,6 +19,8 @@ namespace EmployeeManagement
         {
             this.TEAMs = new HashSet<TEAM>();
             this.TEAMs1 = new HashSet<TEAM>();
+            this.TEAMS2 = new HashSet<TEAM1>();
+            this.TMEMBERS = new HashSet<TMEMBER>();
         }
     
         public int emp_ID { get; set; }
@@ -36,5 +38,9 @@ namespace EmployeeManagement
         public virtual ICollection<TEAM> TEAMs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TEAM> TEAMs1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TEAM1> TEAMS2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TMEMBER> TMEMBERS { get; set; }
     }
 }

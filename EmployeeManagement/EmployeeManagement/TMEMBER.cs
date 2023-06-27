@@ -12,14 +12,13 @@ namespace EmployeeManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class TEAM
+    public partial class TMEMBER
     {
-        public int team_ID { get; set; }
-        public string team_name { get; set; }
+        public int tmembers_ID { get; set; }
+        public Nullable<int> teams_ID { get; set; }
         public Nullable<int> emp_ID { get; set; }
-        public int manager_ID { get; set; }
     
         public virtual Employee Employee { get; set; }
-        public virtual Employee Employee1 { get; set; }
+        public virtual TEAM1 TEAM { get; set; }
     }
 }

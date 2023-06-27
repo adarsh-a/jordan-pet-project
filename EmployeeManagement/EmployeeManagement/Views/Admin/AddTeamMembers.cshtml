@@ -1,0 +1,45 @@
+﻿@model EmployeeManagement.TMEMBER
+
+@{
+    ViewBag.Title = "AddTeamMembers";
+}
+
+<h2>AddTeamMembers</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TMEMBER</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.teams_ID, "teams_ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.DropDownList("teams_ID", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.EditorFor(model => model.teams_ID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.teams_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.emp_ID, "emp_ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.DropDownList("emp_ID", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(model => model.emp_ID, ViewBag.getempname as SelectList, "Select Employee", htmlAttributes: new { @class = "form-control", @multiple = "multiple" })
+                @Html.ValidationMessageFor(model => model.emp_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

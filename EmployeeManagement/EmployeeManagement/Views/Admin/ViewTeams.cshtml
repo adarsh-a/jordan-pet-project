@@ -1,0 +1,38 @@
+﻿@model IEnumerable<EmployeeManagement.TEAM1>
+
+@{
+    ViewBag.Title = "ViewTeams";
+}
+
+<h2>ViewTeams</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateTeams", "Admin")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.teams_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.first_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.teams_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.first_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit Team","EditTeams", new { id=item.teams_ID }) |
+            @Html.ActionLink("Manage Members", "ViewTeamMembers", new { id=item.teams_ID }) |
+            @Html.ActionLink("Delete Team", "DeleteTeams", new { id=item.teams_ID })
+        </td>
+    </tr>
+}
+</table>

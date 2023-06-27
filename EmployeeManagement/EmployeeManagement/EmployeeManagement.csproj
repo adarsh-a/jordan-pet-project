@@ -170,9 +170,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\testController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>EmployeeMgtSystemModel.tt</DependentUpon>
     </Compile>
@@ -195,12 +199,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AddMembersModels.cs" />
     <Compile Include="Models\CreateTeamModels.cs" />
     <Compile Include="Models\EditEmployeeModels.cs" />
     <Compile Include="Models\EditProfileModels.cs" />
     <Compile Include="Models\EmployeeModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LoginModels.cs" />
+    <Compile Include="Models\ManagerViewTeamModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleModels.cs" />
     <Compile Include="Models\UserRoleProvider.cs" />
@@ -210,6 +216,12 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="TEAM.cs">
+      <DependentUpon>EmployeeMgtSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEAM1.cs">
+      <DependentUpon>EmployeeMgtSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TMEMBER.cs">
       <DependentUpon>EmployeeMgtSystemModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -287,23 +299,33 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\test\Index.cshtml" />
-    <Content Include="Views\Home\Role.cshtml" />
-    <Content Include="Views\Home\CreateRole.cshtml" />
-    <Content Include="Views\Home\EditRole.cshtml" />
-    <Content Include="Views\Home\DeleteRole.cshtml" />
-    <Content Include="Views\Home\ViewEmployees.cshtml" />
-    <Content Include="Views\Home\CreateEmployee.cshtml" />
-    <Content Include="Views\Home\EditEmployee.cshtml" />
-    <Content Include="Views\Home\DeleteEmployee.cshtml" />
+    <Content Include="Views\Admin\Role.cshtml" />
+    <Content Include="Views\Admin\CreateRole.cshtml" />
+    <Content Include="Views\Admin\EditRole.cshtml" />
+    <Content Include="Views\Admin\DeleteRole.cshtml" />
+    <Content Include="Views\Admin\ViewEmployees.cshtml" />
+    <Content Include="Views\Admin\CreateEmployee.cshtml" />
+    <Content Include="Views\Admin\EditEmployee.cshtml" />
+    <Content Include="Views\Admin\DeleteEmployee.cshtml" />
     <Content Include="Views\Home\ViewProfiles.cshtml" />
-    <Content Include="Views\Home\EditProfile.cshtml" />
+    <Content Include="Views\Users\EditProfile.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\PasswordTest.cshtml" />
-    <Content Include="Views\Home\ManagerDashboard.cshtml" />
-    <Content Include="Views\Home\AdminDashboard.cshtml" />
-    <Content Include="Views\Home\EmployeeDashboard.cshtml" />
-    <Content Include="Views\Home\ViewTeam.cshtml" />
+    <Content Include="Views\Manager\ManagerDashboard.cshtml" />
+    <Content Include="Views\Admin\AdminDashboard.cshtml" />
+    <Content Include="Views\Employee\EmployeeDashboard.cshtml" />
     <Content Include="Views\Home\CreateTeam.cshtml" />
+    <Content Include="Views\Home\ViewTeam.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Home\edittest.cshtml" />
+    <Content Include="Views\Admin\ViewTeams.cshtml" />
+    <Content Include="Views\Admin\CreateTeams.cshtml" />
+    <Content Include="Views\Admin\EditTeams.cshtml" />
+    <Content Include="Views\Admin\DeleteTeams.cshtml" />
+    <Content Include="Views\Admin\ViewTeamMembers.cshtml" />
+    <Content Include="Views\Admin\RemoveEmployee.cshtml" />
+    <Content Include="Views\Admin\AddTeamMembers.cshtml" />
+    <Content Include="Views\Manager\ManagerViewTeamMembers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

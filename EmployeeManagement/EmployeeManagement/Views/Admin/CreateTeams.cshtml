@@ -1,34 +1,31 @@
-﻿@model EmployeeManagement.TEAM
+﻿@model EmployeeManagement.TEAM1
+
+@{
+    ViewBag.Title = "CreateTeams";
+}
+
+<h2>CreateTeams</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>TEAM</h4>
+        <h4>TEAM1</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.team_name, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.teams_name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.team_name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.team_name, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.emp_ID, "emp_ID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @*@Html.EditorFor(model => model.emp_ID, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.DropDownListFor(model => model.emp_ID, ViewBag.getempname as SelectList, "Select Employee", htmlAttributes: new { @class = "form-control", @multiple = "multiple" })
-                @*@Html.ListBoxFor(m => m.emp_ID, ViewBag.getempname as SelectList)*@
-                @Html.ValidationMessageFor(model => model.emp_ID, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.teams_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.teams_name, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.manager_ID, "manager_ID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @*@Html.DropDownList("manager_ID", null, htmlAttributes: new { @class = "form-control" })*@
                 @*@Html.EditorFor(model => model.manager_ID, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.DropDownListFor(model => model.manager_ID, ViewBag.getrolelistname as SelectList, "Select Manager", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.manager_ID, "", new { @class = "text-danger" })

@@ -34,5 +34,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TEAMS1">
+      <EntityTypeMapping TypeName="EmployeeMgtSystemModel.TEAM1">
+        <MappingFragment StoreEntitySet="TEAMS">
+          <ScalarProperty Name="teams_ID" ColumnName="teams_ID" />
+          <ScalarProperty Name="teams_name" ColumnName="teams_name" />
+          <ScalarProperty Name="manager_ID" ColumnName="manager_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMEMBERS">
+      <EntityTypeMapping TypeName="EmployeeMgtSystemModel.TMEMBER">
+        <MappingFragment StoreEntitySet="TMEMBERS">
+          <ScalarProperty Name="tmembers_ID" ColumnName="tmembers_ID" />
+          <ScalarProperty Name="teams_ID" ColumnName="teams_ID" />
+          <ScalarProperty Name="emp_ID" ColumnName="emp_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

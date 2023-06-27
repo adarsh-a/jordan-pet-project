@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "test";
+}
+
+@model List<string>
+
+<h2>test</h2>
+
+<table>
+    <tr>
+        <td>Team Name</td>
+    </tr>
+
+    @foreach (var team in Model)
+    {
+        <tr>
+            <td>@team</td>
+            <td>
+                @Html.ActionLink("Edit", "edittest", "Home", new { id=team }) |
+                @Html.ActionLink("Details", "Details", new {  id = team }) |
+                @Html.ActionLink("Delete", "Delete", new { id = team })
+            </td>
+        </tr>
+    }
+    </table>
+

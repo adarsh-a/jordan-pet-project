@@ -4,13 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="37b300102dd54ce293cf6e521697f12e" Name="Diagram1">
-        <EntityTypeShape EntityType="EmployeeMgtSystemModel.Employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="EmployeeMgtSystemModel.ROLE" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="EmployeeMgtSystemModel.TEAM" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+      <Diagram DiagramId="53a519d1901044d7a176075421815f77" Name="Diagram1">
+        <EntityTypeShape EntityType="EmployeeMgtSystemModel.Employee" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeMgtSystemModel.ROLE" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeMgtSystemModel.TEAM" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeMgtSystemModel.TEAM1" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeMgtSystemModel.TMEMBER" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
         <AssociationConnector Association="EmployeeMgtSystemModel.FK__Employee__role_I__3B75D760" ManuallyRouted="false" />
         <AssociationConnector Association="EmployeeMgtSystemModel.FK__TEAM__emp_ID__3E52440B" ManuallyRouted="false" />
         <AssociationConnector Association="EmployeeMgtSystemModel.FK__TEAM__manager_ID__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="EmployeeMgtSystemModel.FK__TEAMS__manager_I__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="EmployeeMgtSystemModel.FK__TMEMBERS__emp_ID__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="EmployeeMgtSystemModel.FK__TMEMBERS__teams___44FF419A" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

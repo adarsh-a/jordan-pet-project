@@ -9,7 +9,5 @@ namespace EmployeeManagement.Models
     {
         public int team_ID { set; get; }
         public string team_name { set; get; }
-        public int emp_ID { set; get; }
-        public int manager_ID { set; get; }
     }
 }
