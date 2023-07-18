@@ -1,0 +1,26 @@
+[HttpPost]
+public async Task<IActionResult> EditRole(EditRoleModel model)
+{
+    if (ModelState.IsValid)
+    {
+        // Retrieve the existing role entity from the database based on the model.Id
+        Role role = await db.Roles.FindAsync(model.Id);
+
+        if (role == null)
+        {
+            return NotFound(); // Handle the case when the role with the specified id is not found.
+        }
+
+        // Update the properties of the retrieved role based on the model data
+        role.Rolename = model.RoleName;
+
+        // Save the changes back to the database
+        await db.SaveChangesAsync();
+
+        return RedirectToAction("ViewRoleList");
+    }
+    else
+    {
+        return View(model);
+    }
+}

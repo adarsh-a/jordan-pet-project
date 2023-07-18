@@ -1,0 +1,56 @@
+﻿@model IEnumerable<EmployeeMgtCore.Models.ViewManagerTeamModel>
+
+@{
+    ViewData["Title"] = "MyTeam";
+}
+
+<h1>MyTeam</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th class="d-none">
+                @Html.DisplayNameFor(model => model.empID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.empname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rolename)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="d-none">
+                @Html.DisplayFor(modelItem => item.empID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.empname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rolename)
+            </td>
+            <td>
+                    @Html.ActionLink("Promote", "PromoteEmployee", new {  id=item.empID  }, new { @class = "btn btn-outline-success" })
+        </tr>
+}
+    </tbody>
+</table>

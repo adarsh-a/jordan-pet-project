@@ -1,0 +1,46 @@
+﻿@model IEnumerable<EmployeeMgtCore.Models.CreateTeamModel>
+
+@{
+    ViewData["Title"] = "ViewTeamList";
+}
+
+<h1>ViewTeamList</h1>
+
+<p>
+    <a asp-action="CreateTeam" class="btn btn-lg btn-primary">New Team</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="d-none">
+                @Html.DisplayNameFor(model => model.Team_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teamname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mangername)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="d-none">
+                @Html.DisplayFor(modelItem => item.Team_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mangername)
+            <td>
+                        @Html.ActionLink("Edit Details", "EditTeamDetails", new {  id=item.Team_ID}, new { @class = "btn btn-outline-success" })
+                        @Html.ActionLink("Manage Members", "ManageTeamMembers", new {  id=item.Team_ID}, new { @class = "btn btn-outline-warning" })
+                        @Html.ActionLink("Delete Team", "DeleteTeam", new { id=item.Team_ID  }, new { @class = "btn btn-outline-danger" })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EmployeeMgtCore.Models.ManageMembersModel>
+
+@{
+    ViewData["Title"] = "ManageTeamMembers";
+}
+
+<h1>ManageTeamMembers</h1>
+
+<p>
+    <a asp-action="AddMember" asp-route-id="@ViewBag.Teamid" class="btn btn-lg btn-primary">Add New Member</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="d-none">
+                @Html.DisplayNameFor(model => model.memberId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.membername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rolename)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="d-none">
+                @Html.DisplayFor(modelItem => item.memberId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.membername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rolename)
+            </td>
+            <td>
+                    @Html.ActionLink("Remove Employee", "RemoveEmployee", new {  id=item.memberId }, new {  @class="btn btn-danger" })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p class="fw-bold">[Total Members: @ViewBag.countmembers]</p>

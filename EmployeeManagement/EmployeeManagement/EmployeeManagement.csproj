@@ -175,7 +175,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
-    <Compile Include="Controllers\testController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>EmployeeMgtSystemModel.tt</DependentUpon>
@@ -307,17 +306,12 @@
     <Content Include="Views\Admin\CreateEmployee.cshtml" />
     <Content Include="Views\Admin\EditEmployee.cshtml" />
     <Content Include="Views\Admin\DeleteEmployee.cshtml" />
-    <Content Include="Views\Home\ViewProfiles.cshtml" />
     <Content Include="Views\Users\EditProfile.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\PasswordTest.cshtml" />
     <Content Include="Views\Manager\ManagerDashboard.cshtml" />
     <Content Include="Views\Admin\AdminDashboard.cshtml" />
     <Content Include="Views\Employee\EmployeeDashboard.cshtml" />
-    <Content Include="Views\Home\CreateTeam.cshtml" />
-    <Content Include="Views\Home\ViewTeam.cshtml" />
     <Content Include="Views\Home\test.cshtml" />
-    <Content Include="Views\Home\edittest.cshtml" />
     <Content Include="Views\Admin\ViewTeams.cshtml" />
     <Content Include="Views\Admin\CreateTeams.cshtml" />
     <Content Include="Views\Admin\EditTeams.cshtml" />

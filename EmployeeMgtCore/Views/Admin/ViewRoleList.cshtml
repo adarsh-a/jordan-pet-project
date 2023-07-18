@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EmployeeMgtCore.Role>
+
+@{
+    ViewData["Title"] = "Manage Roles";
+}
+
+<h1>ViewRoleList</h1>
+
+<p>
+    <a asp-action="CreateRole" class="btn btn-lg btn-primary">Add new role</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="hidden">
+                @Html.DisplayNameFor(model => model.RoleId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rolename) (Total roles: @ViewBag.countroles)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="hidden">
+                @Html.DisplayFor(modelItem => item.RoleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rolename)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditRole", new { id = item.RoleId }, new { @class = "btn btn-outline-success" })
+                @Html.ActionLink("Delete", "DeleteRole", new { id=item.RoleId }, new { @class = "btn btn-outline-danger" })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<style>
+    .hidden {
+        display: none;
+    }
+</style>

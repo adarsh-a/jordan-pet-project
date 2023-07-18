@@ -1,0 +1,137 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EmployeeMgtCore
+build_property.RootNamespace = EmployeeMgtCore
+build_property.ProjectDir = C:\Users\JordanMTirvengadum(R\OneDrive - OneWorkplace\Documents\jordan-pet-project\EmployeeMgtCore\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\JordanMTirvengadum(R\OneDrive - OneWorkplace\Documents\jordan-pet-project\EmployeeMgtCore
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/AddMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTWVtYmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/AdminDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/CreateEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/CreateRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/CreateTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlVGVhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/DeleteEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/DeleteRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/DeleteTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlVGVhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/EditEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/EditTeamDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFRlYW1EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/ManageTeamMembers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlVGVhbU1lbWJlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/RemoveEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVtb3ZlRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/ViewEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0VtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/ViewRoleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1JvbGVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Admin/ViewTeamList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1RlYW1MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Employee/EmployeeDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Manager/ManagerDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxNYW5hZ2VyRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Manager/MyTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxNeVRlYW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Manager/PromoteEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxQcm9tb3RlRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JordanMTirvengadum(R/OneDrive - OneWorkplace/Documents/jordan-pet-project/EmployeeMgtCore/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-pkhbropm4x

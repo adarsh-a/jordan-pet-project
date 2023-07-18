@@ -1,0 +1,62 @@
+﻿@model EmployeeMgtCore.Models.CreateEmployeeModel
+
+@{
+    ViewData["Title"] = "EditEmployee";
+}
+
+<h1>EditEmployee</h1>
+
+<h4>CreateEmployeeModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditEmployee">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group d-none">
+                <label asp-for="emp_ID" class="control-label"></label>
+                <input asp-for="emp_ID" class="form-control" />
+                <span asp-validation-for="emp_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fname" class="control-label"></label>
+                <input asp-for="fname" class="form-control" />
+                <span asp-validation-for="fname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lname" class="control-label"></label>
+                <input asp-for="lname" class="form-control" />
+                <span asp-validation-for="lname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                @*<input asp-for="address" class="form-control" />*@
+                <textarea asp-for="address" class="form-control"></textarea>
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phonenum" class="control-label"></label>
+                <input asp-for="phonenum" class="form-control" />
+                <span asp-validation-for="phonenum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="role_ID" class="control-label"></label>
+                @*<input asp-for="role_ID" class="form-control" />*@
+                <select asp-for="role_ID" class="form-control form-select" asp-items="@ViewBag.rolelistname"></select>
+                <span asp-validation-for="role_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

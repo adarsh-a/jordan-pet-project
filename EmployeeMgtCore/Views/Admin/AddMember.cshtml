@@ -1,0 +1,41 @@
+﻿@model EmployeeMgtCore.Tmember
+
+@{
+    ViewData["Title"] = "AddMember";
+}
+
+<h1>AddMember</h1>
+
+<h4>Tmember</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddMember">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group d-none">
+                <label asp-for="MemberId" class="control-label"></label>
+                <input asp-for="MemberId" class="form-control" />
+                <span asp-validation-for="MemberId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpId" class="control-label"></label>
+                @*<input asp-for="EmpId" class="form-control" />*@
+                <select asp-for="EmpId" class="form-control form-select" asp-items="@ViewBag.employeelistname" multiple></select>
+                <span asp-validation-for="EmpId" class="text-danger"></span>
+            </div>
+            <div class="form-group d-none">
+                <label asp-for="TeamId" class="control-label"></label>
+                <input asp-for="TeamId" class="form-control" />
+                <span asp-validation-for="TeamId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Members" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AdminDashboard">Back to Home</a>
+</div>
+

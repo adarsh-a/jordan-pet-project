@@ -1,0 +1,70 @@
+﻿@model IEnumerable<EmployeeMgtCore.Models.EmployeeListModel>
+
+@{
+    ViewData["Title"] = "ViewEmployee";
+}
+
+<h1>ViewEmployee</h1>
+
+<p>
+    <a asp-action="CreateEmployee" class="btn btn-lg btn-primary">New Employee</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="d-none">
+                @Html.DisplayNameFor(model => model.emp_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phonenum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rolename)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="d-none">
+                @Html.DisplayFor(modelItem => item.emp_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phonenum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rolename)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit Employee Details", "EditEmployee", new {  id=item.emp_ID }, new { @class = "btn btn-outline-success" })
+                    @Html.ActionLink("Delete Employee", "DeleteEmployee", new { id=item.emp_ID },new { @class = "btn btn-outline-danger" })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
